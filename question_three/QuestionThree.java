@@ -1,3 +1,4 @@
+import java.util.stream.LongStream;
 /**
   * The prime factors of 13195 are 5, 7, 13 and 29.
   *
@@ -9,7 +10,7 @@ public class QuestionThree {
 
         long prime = PrimeStream.getNext();
         long primeSelection = 0;
-        while (prime < (input / 2)) {
+        while (prime < (input / prime)) { // Haha, the dividing by the prime is key
             if (input % prime == 0) {
                 System.out.println(prime);
                 primeSelection = prime;
